@@ -50,7 +50,7 @@ export type FilterConstraint = zod.input<typeof FilterConstraint>;
 export type FilterConstraintOutput = zod.output<typeof FilterConstraint>;
 
 export const HttpProblem = zod
-	.object({
+	.looseObject({
 		type: zod.url().optional().describe('A optional URI reference that identifies the problem type'),
 		title: zod.coerce.string().optional().describe('A optional, short, human-readable summary of the problem type'),
 		status: zod.coerce.number().int().optional().describe('The HTTP status code for this occurrence of the problem'),
@@ -74,7 +74,7 @@ export type Violation = zod.input<typeof Violation>;
 export type ViolationOutput = zod.output<typeof Violation>;
 
 export const HttpValidationProblem = zod
-	.object({
+	.looseObject({
 		type: zod.url().optional().describe('A optional URI reference that identifies the problem type'),
 		title: zod.coerce.string().optional().describe('A optional, short, human-readable summary of the problem type'),
 		status: zod.coerce.number().int().optional().describe('The HTTP status code for this occurrence of the problem'),

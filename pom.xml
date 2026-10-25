@@ -3,18 +3,18 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.melloware</groupId>
 	<artifactId>quarkus-mantleui</artifactId>
-	<version>10.10.7</version>
+	<version>10.13.1</version>
 	<packaging>quarkus</packaging>
 	<name>Quarkus MantleUI</name>
 	<description>Quarkus monorepo demonstrating Panache REST server with Mantle UI client</description>
 	<url>https://github.com/melloware/quarkus-monorepo</url>
 	<properties>
-		<quarkus.platform.version>3.39.5</quarkus.platform.version>
+		<quarkus.platform.version>3.40.1.1</quarkus.platform.version>
 		<quarkus.logmanager.version>3.4.2</quarkus.logmanager.version>
-		<quarkus.ngrok.version>1.8.0</quarkus.ngrok.version>
+		<quarkus.ngrok.version>1.9.1</quarkus.ngrok.version>
 		<quarkus.postgresql.version>0.8.0</quarkus.postgresql.version>
 		<quarkus.http-problem.version>3.38.1</quarkus.http-problem.version>
-		<quarkus.quinoa.version>2.9.1</quarkus.quinoa.version>
+		<quarkus.quinoa.version>2.9.3</quarkus.quinoa.version>
 		<lombok.version>1.18.48</lombok.version>
 		<!-- Plugins-->
 		<surefire-plugin.version>3.6.0</surefire-plugin.version>
