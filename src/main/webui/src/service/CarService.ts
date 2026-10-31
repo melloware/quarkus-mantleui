@@ -289,9 +289,7 @@ export type LoggingManagerGetAllParams = {
 };
 
 export type LoggingManagerUpdateParams = {
-	/**
-	 * Used to set the log level temporarily
-	 */
+	/** Used to set the log level temporarily */
 	temporary?: boolean;
 };
 
