@@ -354,6 +354,10 @@ export const useGetEntityCarsQueryOptions = <TData = Awaited<ReturnType<ReturnTy
 export type GetEntityCarsQueryResult = NonNullable<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsHook>>>>;
 export type GetEntityCarsQueryError = ErrorType<HttpProblem>;
 
+/**
+ * Returns a paginated list of cars with optional filtering and sorting
+ * @summary List cars
+ */
 export function useGetEntityCars<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsHook>>>, TError = ErrorType<HttpProblem>>(
 	params: undefined | GetEntityCarsParams,
 	options: {
@@ -369,6 +373,10 @@ export function useGetEntityCars<TData = Awaited<ReturnType<ReturnType<typeof us
 	},
 	queryClient?: QueryClient
 ): DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Returns a paginated list of cars with optional filtering and sorting
+ * @summary List cars
+ */
 export function useGetEntityCars<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsHook>>>, TError = ErrorType<HttpProblem>>(
 	params?: GetEntityCarsParams,
 	options?: {
@@ -384,15 +392,19 @@ export function useGetEntityCars<TData = Awaited<ReturnType<ReturnType<typeof us
 	},
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Returns a paginated list of cars with optional filtering and sorting
+ * @summary List cars
+ */
 export function useGetEntityCars<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsHook>>>, TError = ErrorType<HttpProblem>>(
 	params?: GetEntityCarsParams,
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsHook>>>, TError, TData>> },
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
 /**
+ * Returns a paginated list of cars with optional filtering and sorting
  * @summary List cars
  */
-
 export function useGetEntityCars<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsHook>>>, TError = ErrorType<HttpProblem>>(
 	params?: GetEntityCarsParams,
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsHook>>>, TError, TData>> },
@@ -449,6 +461,7 @@ export type PostEntityCarsMutationError = ErrorType<HttpProblem>;
 export type PostEntityCarsMutationVariables = { data: Car };
 
 /**
+ * Creates a new car entry
  * @summary Create a new car
  */
 export const usePostEntityCars = <TError = ErrorType<HttpProblem>, TContext = unknown>(
@@ -504,6 +517,10 @@ export const useGetEntityCarsManufacturersQueryOptions = <
 export type GetEntityCarsManufacturersQueryResult = NonNullable<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsManufacturersHook>>>>;
 export type GetEntityCarsManufacturersQueryError = ErrorType<unknown>;
 
+/**
+ * Returns a list of distinct car manufacturers
+ * @summary Get all manufacturers
+ */
 export function useGetEntityCarsManufacturers<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsManufacturersHook>>>, TError = ErrorType<unknown>>(
 	options: {
 		query: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsManufacturersHook>>>, TError, TData>> &
@@ -518,6 +535,10 @@ export function useGetEntityCarsManufacturers<TData = Awaited<ReturnType<ReturnT
 	},
 	queryClient?: QueryClient
 ): DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Returns a list of distinct car manufacturers
+ * @summary Get all manufacturers
+ */
 export function useGetEntityCarsManufacturers<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsManufacturersHook>>>, TError = ErrorType<unknown>>(
 	options?: {
 		query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsManufacturersHook>>>, TError, TData>> &
@@ -532,14 +553,18 @@ export function useGetEntityCarsManufacturers<TData = Awaited<ReturnType<ReturnT
 	},
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Returns a list of distinct car manufacturers
+ * @summary Get all manufacturers
+ */
 export function useGetEntityCarsManufacturers<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsManufacturersHook>>>, TError = ErrorType<unknown>>(
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsManufacturersHook>>>, TError, TData>> },
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
 /**
+ * Returns a list of distinct car manufacturers
  * @summary Get all manufacturers
  */
-
 export function useGetEntityCarsManufacturers<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsManufacturersHook>>>, TError = ErrorType<unknown>>(
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsManufacturersHook>>>, TError, TData>> },
 	queryClient?: QueryClient
@@ -595,6 +620,7 @@ export type PutEntityCarsIdMutationError = ErrorType<HttpProblem>;
 export type PutEntityCarsIdMutationVariables = { id: number; data: Car };
 
 /**
+ * Updates an existing car based on ID
  * @summary Update a car
  */
 export const usePutEntityCarsId = <TError = ErrorType<HttpProblem>, TContext = unknown>(
@@ -647,6 +673,10 @@ export const useGetEntityCarsIdQueryOptions = <TData = Awaited<ReturnType<Return
 export type GetEntityCarsIdQueryResult = NonNullable<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsIdHook>>>>;
 export type GetEntityCarsIdQueryError = ErrorType<HttpProblem>;
 
+/**
+ * Returns a car based on the provided ID
+ * @summary Get a car by ID
+ */
 export function useGetEntityCarsId<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsIdHook>>>, TError = ErrorType<HttpProblem>>(
 	id: number,
 	options: {
@@ -662,6 +692,10 @@ export function useGetEntityCarsId<TData = Awaited<ReturnType<ReturnType<typeof 
 	},
 	queryClient?: QueryClient
 ): DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Returns a car based on the provided ID
+ * @summary Get a car by ID
+ */
 export function useGetEntityCarsId<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsIdHook>>>, TError = ErrorType<HttpProblem>>(
 	id: number,
 	options?: {
@@ -677,15 +711,19 @@ export function useGetEntityCarsId<TData = Awaited<ReturnType<ReturnType<typeof 
 	},
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Returns a car based on the provided ID
+ * @summary Get a car by ID
+ */
 export function useGetEntityCarsId<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsIdHook>>>, TError = ErrorType<HttpProblem>>(
 	id: number,
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsIdHook>>>, TError, TData>> },
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
 /**
+ * Returns a car based on the provided ID
  * @summary Get a car by ID
  */
-
 export function useGetEntityCarsId<TData = Awaited<ReturnType<ReturnType<typeof useGetEntityCarsIdHook>>>, TError = ErrorType<HttpProblem>>(
 	id: number,
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useGetEntityCarsIdHook>>>, TError, TData>> },
@@ -742,6 +780,7 @@ export type DeleteEntityCarsIdMutationError = ErrorType<HttpProblem>;
 export type DeleteEntityCarsIdMutationVariables = { id: number };
 
 /**
+ * Deletes a car based on ID
  * @summary Delete a car
  */
 export const useDeleteEntityCarsId = <TError = ErrorType<HttpProblem>, TContext = unknown>(
@@ -797,6 +836,7 @@ export type PostSocketNotifyMutationError = ErrorType<HttpProblem>;
 export type PostSocketNotifyMutationVariables = { params?: PostSocketNotifyParams };
 
 /**
+ * Pushes a notification message to all connected clients
  * @summary Push notification message
  */
 export const usePostSocketNotify = <TError = ErrorType<HttpProblem>, TContext = unknown>(
@@ -849,6 +889,7 @@ export type PostSocketRefreshMutationResult = NonNullable<Awaited<ReturnType<Ret
 export type PostSocketRefreshMutationError = ErrorType<unknown>;
 
 /**
+ * Pushes a UI refresh signal to all connected clients
  * @summary Push a UI refresh signal
  */
 export const usePostSocketRefresh = <TError = ErrorType<unknown>, TContext = unknown>(
@@ -897,6 +938,10 @@ export const useLoggingManagerGetAllQueryOptions = <TData = Awaited<ReturnType<R
 export type LoggingManagerGetAllQueryResult = NonNullable<Awaited<ReturnType<ReturnType<typeof useLoggingManagerGetAllHook>>>>;
 export type LoggingManagerGetAllQueryError = ErrorType<void>;
 
+/**
+ * Get information on all loggers or a specific logger.
+ * @summary Information on Logger(s)
+ */
 export function useLoggingManagerGetAll<TData = Awaited<ReturnType<ReturnType<typeof useLoggingManagerGetAllHook>>>, TError = ErrorType<void>>(
 	params: undefined | LoggingManagerGetAllParams,
 	options: {
@@ -912,6 +957,10 @@ export function useLoggingManagerGetAll<TData = Awaited<ReturnType<ReturnType<ty
 	},
 	queryClient?: QueryClient
 ): DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Get information on all loggers or a specific logger.
+ * @summary Information on Logger(s)
+ */
 export function useLoggingManagerGetAll<TData = Awaited<ReturnType<ReturnType<typeof useLoggingManagerGetAllHook>>>, TError = ErrorType<void>>(
 	params?: LoggingManagerGetAllParams,
 	options?: {
@@ -927,15 +976,19 @@ export function useLoggingManagerGetAll<TData = Awaited<ReturnType<ReturnType<ty
 	},
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Get information on all loggers or a specific logger.
+ * @summary Information on Logger(s)
+ */
 export function useLoggingManagerGetAll<TData = Awaited<ReturnType<ReturnType<typeof useLoggingManagerGetAllHook>>>, TError = ErrorType<void>>(
 	params?: LoggingManagerGetAllParams,
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useLoggingManagerGetAllHook>>>, TError, TData>> },
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
 /**
+ * Get information on all loggers or a specific logger.
  * @summary Information on Logger(s)
  */
-
 export function useLoggingManagerGetAll<TData = Awaited<ReturnType<ReturnType<typeof useLoggingManagerGetAllHook>>>, TError = ErrorType<void>>(
 	params?: LoggingManagerGetAllParams,
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useLoggingManagerGetAllHook>>>, TError, TData>> },
@@ -957,16 +1010,22 @@ export const useLoggingManagerUpdateHook = () => {
 
 	return useCallback(
 		(loggingManagerUpdateBody?: LoggingManagerUpdateBody, params?: LoggingManagerUpdateParams, signal?: AbortSignal) => {
-			const formUrlEncoded = new URLSearchParams();
-			if (loggingManagerUpdateBody?.loggerName !== undefined) {
-				formUrlEncoded.append(`loggerName`, loggingManagerUpdateBody.loggerName);
-			}
-			if (loggingManagerUpdateBody?.loggerLevel !== undefined) {
-				formUrlEncoded.append(`loggerLevel`, loggingManagerUpdateBody.loggerLevel);
-			}
-			if (loggingManagerUpdateBody?.duration !== undefined) {
-				formUrlEncoded.append(`duration`, loggingManagerUpdateBody.duration.toString());
-			}
+			const formUrlEncoded =
+				loggingManagerUpdateBody === undefined
+					? undefined
+					: (() => {
+							const formUrlEncoded = new URLSearchParams();
+							if (loggingManagerUpdateBody?.loggerName !== undefined) {
+								formUrlEncoded.append(`loggerName`, loggingManagerUpdateBody.loggerName);
+							}
+							if (loggingManagerUpdateBody?.loggerLevel !== undefined) {
+								formUrlEncoded.append(`loggerLevel`, loggingManagerUpdateBody.loggerLevel);
+							}
+							if (loggingManagerUpdateBody?.duration !== undefined) {
+								formUrlEncoded.append(`duration`, loggingManagerUpdateBody.duration.toString());
+							}
+							return formUrlEncoded;
+						})();
 
 			return loggingManagerUpdate({
 				url: `/q/logging-manager`,
@@ -1012,6 +1071,7 @@ export type LoggingManagerUpdateMutationError = ErrorType<void>;
 export type LoggingManagerUpdateMutationVariables = { data?: LoggingManagerUpdateBody; params?: LoggingManagerUpdateParams };
 
 /**
+ * Update a log level for a certain logger. Use query param `temporary=true` for temporary level.
  * @summary Update log level
  */
 export const useLoggingManagerUpdate = <TError = ErrorType<void>, TContext = unknown>(
@@ -1069,6 +1129,10 @@ export const useLoggingManagerLevelsQueryOptions = <
 export type LoggingManagerLevelsQueryResult = NonNullable<Awaited<ReturnType<ReturnType<typeof useLoggingManagerLevelsHook>>>>;
 export type LoggingManagerLevelsQueryError = ErrorType<unknown>;
 
+/**
+ * This returns all possible log levels
+ * @summary Get all available levels
+ */
 export function useLoggingManagerLevels<TData = Awaited<ReturnType<ReturnType<typeof useLoggingManagerLevelsHook>>>, TError = ErrorType<unknown>>(
 	options: {
 		query: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useLoggingManagerLevelsHook>>>, TError, TData>> &
@@ -1083,6 +1147,10 @@ export function useLoggingManagerLevels<TData = Awaited<ReturnType<ReturnType<ty
 	},
 	queryClient?: QueryClient
 ): DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * This returns all possible log levels
+ * @summary Get all available levels
+ */
 export function useLoggingManagerLevels<TData = Awaited<ReturnType<ReturnType<typeof useLoggingManagerLevelsHook>>>, TError = ErrorType<unknown>>(
 	options?: {
 		query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useLoggingManagerLevelsHook>>>, TError, TData>> &
@@ -1097,14 +1165,18 @@ export function useLoggingManagerLevels<TData = Awaited<ReturnType<ReturnType<ty
 	},
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * This returns all possible log levels
+ * @summary Get all available levels
+ */
 export function useLoggingManagerLevels<TData = Awaited<ReturnType<ReturnType<typeof useLoggingManagerLevelsHook>>>, TError = ErrorType<unknown>>(
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useLoggingManagerLevelsHook>>>, TError, TData>> },
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
 /**
+ * This returns all possible log levels
  * @summary Get all available levels
  */
-
 export function useLoggingManagerLevels<TData = Awaited<ReturnType<ReturnType<typeof useLoggingManagerLevelsHook>>>, TError = ErrorType<unknown>>(
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useLoggingManagerLevelsHook>>>, TError, TData>> },
 	queryClient?: QueryClient
@@ -1157,6 +1229,10 @@ export const useMicroprofileHealthRootQueryOptions = <
 export type MicroprofileHealthRootQueryResult = NonNullable<Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthRootHook>>>>;
 export type MicroprofileHealthRootQueryError = ErrorType<HealthResponse>;
 
+/**
+ * Check the health of the application
+ * @summary An aggregated view of the Liveness, Readiness and Startup of this application
+ */
 export function useMicroprofileHealthRoot<TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthRootHook>>>, TError = ErrorType<HealthResponse>>(
 	options: {
 		query: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthRootHook>>>, TError, TData>> &
@@ -1171,6 +1247,10 @@ export function useMicroprofileHealthRoot<TData = Awaited<ReturnType<ReturnType<
 	},
 	queryClient?: QueryClient
 ): DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Check the health of the application
+ * @summary An aggregated view of the Liveness, Readiness and Startup of this application
+ */
 export function useMicroprofileHealthRoot<TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthRootHook>>>, TError = ErrorType<HealthResponse>>(
 	options?: {
 		query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthRootHook>>>, TError, TData>> &
@@ -1185,14 +1265,18 @@ export function useMicroprofileHealthRoot<TData = Awaited<ReturnType<ReturnType<
 	},
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Check the health of the application
+ * @summary An aggregated view of the Liveness, Readiness and Startup of this application
+ */
 export function useMicroprofileHealthRoot<TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthRootHook>>>, TError = ErrorType<HealthResponse>>(
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthRootHook>>>, TError, TData>> },
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
 /**
+ * Check the health of the application
  * @summary An aggregated view of the Liveness, Readiness and Startup of this application
  */
-
 export function useMicroprofileHealthRoot<TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthRootHook>>>, TError = ErrorType<HealthResponse>>(
 	options?: { query?: Partial<UseQueryOptions<Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthRootHook>>>, TError, TData>> },
 	queryClient?: QueryClient
@@ -1248,6 +1332,10 @@ export const useMicroprofileHealthLivenessQueryOptions = <
 export type MicroprofileHealthLivenessQueryResult = NonNullable<Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthLivenessHook>>>>;
 export type MicroprofileHealthLivenessQueryError = ErrorType<HealthResponse>;
 
+/**
+ * Check the liveness of the application
+ * @summary The Liveness check of this application
+ */
 export function useMicroprofileHealthLiveness<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthLivenessHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1265,6 +1353,10 @@ export function useMicroprofileHealthLiveness<
 	},
 	queryClient?: QueryClient
 ): DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Check the liveness of the application
+ * @summary The Liveness check of this application
+ */
 export function useMicroprofileHealthLiveness<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthLivenessHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1282,6 +1374,10 @@ export function useMicroprofileHealthLiveness<
 	},
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Check the liveness of the application
+ * @summary The Liveness check of this application
+ */
 export function useMicroprofileHealthLiveness<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthLivenessHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1290,9 +1386,9 @@ export function useMicroprofileHealthLiveness<
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
 /**
+ * Check the liveness of the application
  * @summary The Liveness check of this application
  */
-
 export function useMicroprofileHealthLiveness<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthLivenessHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1351,6 +1447,10 @@ export const useMicroprofileHealthReadinessQueryOptions = <
 export type MicroprofileHealthReadinessQueryResult = NonNullable<Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthReadinessHook>>>>;
 export type MicroprofileHealthReadinessQueryError = ErrorType<HealthResponse>;
 
+/**
+ * Check the readiness of the application
+ * @summary The Readiness check of this application
+ */
 export function useMicroprofileHealthReadiness<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthReadinessHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1368,6 +1468,10 @@ export function useMicroprofileHealthReadiness<
 	},
 	queryClient?: QueryClient
 ): DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Check the readiness of the application
+ * @summary The Readiness check of this application
+ */
 export function useMicroprofileHealthReadiness<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthReadinessHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1385,6 +1489,10 @@ export function useMicroprofileHealthReadiness<
 	},
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Check the readiness of the application
+ * @summary The Readiness check of this application
+ */
 export function useMicroprofileHealthReadiness<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthReadinessHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1393,9 +1501,9 @@ export function useMicroprofileHealthReadiness<
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
 /**
+ * Check the readiness of the application
  * @summary The Readiness check of this application
  */
-
 export function useMicroprofileHealthReadiness<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthReadinessHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1453,6 +1561,10 @@ export const useMicroprofileHealthStartupQueryOptions = <
 export type MicroprofileHealthStartupQueryResult = NonNullable<Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthStartupHook>>>>;
 export type MicroprofileHealthStartupQueryError = ErrorType<HealthResponse>;
 
+/**
+ * Check the startup of the application
+ * @summary The Startup check of this application
+ */
 export function useMicroprofileHealthStartup<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthStartupHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1470,6 +1582,10 @@ export function useMicroprofileHealthStartup<
 	},
 	queryClient?: QueryClient
 ): DefinedUseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Check the startup of the application
+ * @summary The Startup check of this application
+ */
 export function useMicroprofileHealthStartup<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthStartupHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1487,6 +1603,10 @@ export function useMicroprofileHealthStartup<
 	},
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
+/**
+ * Check the startup of the application
+ * @summary The Startup check of this application
+ */
 export function useMicroprofileHealthStartup<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthStartupHook>>>,
 	TError = ErrorType<HealthResponse>
@@ -1495,9 +1615,9 @@ export function useMicroprofileHealthStartup<
 	queryClient?: QueryClient
 ): UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> };
 /**
+ * Check the startup of the application
  * @summary The Startup check of this application
  */
-
 export function useMicroprofileHealthStartup<
 	TData = Awaited<ReturnType<ReturnType<typeof useMicroprofileHealthStartupHook>>>,
 	TError = ErrorType<HealthResponse>
